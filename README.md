@@ -56,3 +56,15 @@ Models were trained on 80% of the data and evaluated on the remaining 20% using:
 | Gradient Boosting     | 3.54 | 4.41 |
 
 **Random Forest** showed the best performance with an MAE of 3.05 minutes, indicating reliable predictions given the average delivery time of 26.58 minutes.
+
+## Results & Insights
+
+Key findings from the analysis and modeling:
+
+- **Random Forest** performed best among the models, handling non-linear relationships and categorical features effectively.
+- Most influential features in predicting delivery time were:
+  1. `Delivery_person_Ratings` – higher-rated personnel tend to deliver faster
+  2. `distance_km` – longer distances naturally increase delivery time
+  3. `Road_traffic_density` – traffic conditions significantly affect delivery duration
+- Models are robust against outliers and overfitting, ensuring reliable predictions for real-world scenarios.
+- The average delivery time in the dataset is **26.58 minutes**, and the Random Forest model achieves an MAE of **3.05 minutes**, which is acceptable for practical purposes.
