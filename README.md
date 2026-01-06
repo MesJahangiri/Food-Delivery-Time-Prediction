@@ -19,3 +19,19 @@ Key features include:
 - `Time_taken(min)`: Target variable representing delivery time in minutes
 
 The dataset contains **45,593 rows** and **20 columns**. After cleaning and preprocessing, **37,918 rows** remained for modeling.
+
+## Preprocessing & Feature Engineering
+
+The raw dataset contained missing values, inconsistent formats, and outliers. Comprehensive data cleaning was performed to:
+
+- Handle missing values (`NaN`) in numeric and categorical columns
+- Normalize and standardize timestamps and categorical strings
+- Remove unrealistic location coordinates and delivery distances
+
+Feature engineering included:
+
+- Calculating `distance_km` between restaurants and delivery locations using Haversine formula
+- Extracting order day of the week, order hour, and pickup hour as numeric features
+- Computing `prep_time_minutes` as the difference between order and pickup time
+- Encoding categorical variables for modeling
+
