@@ -15,7 +15,7 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
 
 # Load dataset / بارگذاری داده
-df = pd.read_csv("C:\\Users\\PaciFic\\Desktop\\AI Course\\پروژه پایانی\\fooddata.csv")
+df = pd.read_csv("fooddata.csv")
 print(df.head())  # نمایش پنج ردیف اول / Display first 5 rows
 print(df.info())  # اطلاعات کلی دیتافریم / General dataframe info
 
