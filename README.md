@@ -35,3 +35,24 @@ Feature engineering included:
 - Computing `prep_time_minutes` as the difference between order and pickup time
 - Encoding categorical variables for modeling
 
+
+## Modeling & Evaluation
+
+Three models were implemented to predict food delivery time:
+
+1. **Linear Regression** – a baseline model for comparison
+2. **Random Forest Regressor** – ensemble model capturing non-linear relationships
+3. **Gradient Boosting Regressor** – boosting model to improve prediction accuracy
+
+Models were trained on 80% of the data and evaluated on the remaining 20% using:
+
+- **MAE (Mean Absolute Error)**
+- **RMSE (Root Mean Square Error)**
+
+| Model                 | MAE  | RMSE |
+|-----------------------|------|------|
+| Linear Regression     | 4.60 | 5.75 |
+| Random Forest         | 3.05 | 3.81 |
+| Gradient Boosting     | 3.54 | 4.41 |
+
+**Random Forest** showed the best performance with an MAE of 3.05 minutes, indicating reliable predictions given the average delivery time of 26.58 minutes.
