@@ -89,7 +89,7 @@ def haversine(lat1, lon1, lat2, lon2):
 df_ready["distance_km"] = haversine(df_ready["Restaurant_latitude"], df_ready["Restaurant_longitude"], df_ready["Delivery_location_latitude"], df_ready["Delivery_location_longitude"])
 
 # Convert times to numeric / تبدیل زمان‌ها به عدد
- df_ready["order_dayofweek"] = df_ready["Order_Date"].dt.weekday.astype("int8")
+df_ready["order_dayofweek"] = df_ready["Order_Date"].dt.weekday.astype("int8")
 df_ready["order_hour_float"] = (df_ready["Time_Orderd"].dt.hour + df_ready["Time_Orderd"].dt.minute / 60).astype("float32")
 df_ready["pickup_hour_float"] = (df_ready["Time_Order_picked"].dt.hour + df_ready["Time_Order_picked"].dt.minute / 60).astype("float32")
 df_ready["prep_time_minutes"] = ((df_ready["pickup_hour_float"] - df_ready["order_hour_float"]).where(lambda x: x >=0, lambda x: x + 24) * 60).astype("float32")
